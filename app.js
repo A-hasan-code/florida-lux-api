@@ -11,9 +11,13 @@ const { authLimiter } = require('./middlewares/rateLimiter');
 const routes = require('./routes/v1');
 const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
-const fileSystem = require("fs");
+//const fileSystem = require("fs");
+const bodyParser = require("body-parser")
 
 const app = express();
+
+app.use(bodyParser.json({ limit: '50mb' }));
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 if (config.env !== 'test') {
   app.use(morgan.successHandler);

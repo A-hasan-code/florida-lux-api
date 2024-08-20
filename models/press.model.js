@@ -10,7 +10,7 @@ const pressSchema = mongoose.Schema(
     content: {
       type: String,
     },
-    photo: {
+    cover: {
       type: String,
     },
   },

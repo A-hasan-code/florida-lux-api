@@ -23,6 +23,7 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.2",
@@ -43,6 +44,7 @@
     "passport-jwt": "^4.0.1",
     "path": "^0.12.7",
     "request": "^2.88.2",
+    "simple-nodejs-app": "file:",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0",
     "validator": "^13.11.0",

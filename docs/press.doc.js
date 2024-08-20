@@ -13,9 +13,6 @@
  *         content:
  *           type: string
  *           description: Content of the Press
- *          photo:
- *           type: string
- *           description: The photo URL of the item.
 
  *
  * paths:
@@ -28,7 +25,6 @@
  *         required: true
  *         content:
  *           application/json:
- * 
  *             schema:
  *               $ref: '#/components/schemas/Press'
  *       responses:

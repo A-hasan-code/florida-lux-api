@@ -2,6 +2,7 @@ const catchAsync = require("../utils/catchAsync");
 const { Press } = require("../models");
 
 const createPost = catchAsync(async (req, res) => {
+  console.log("posttttt")
   const { permissions } = req.user.roleId;
   const all = permissions.find((i) => i.module === "all");
 
