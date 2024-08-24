@@ -17,9 +17,9 @@ const createReport = catchAsync(async (req, res) => {
 
 const getReport = catchAsync(async (req, res) => {
     try {
-        const Report = await Report.findById(req.params.id).exec();
+        const report = await Report.findById(req.params.id).exec();
 
-        return res.status(200).send(Report);
+        return res.status(200).send(report);
     } catch (error) {
         // Handle errors
         console.error(error);
@@ -32,7 +32,7 @@ const updateReport = catchAsync(async (req, res) => {
     const all = permissions.find((i) => i.module === "all");
 
     if (all) {
-        await Press.findByIdAndUpdate(req.params.id, req.body);
+        await Report.findByIdAndUpdate(req.params.id, req.body);
 
         return res.status(200).send("Report updated successfully");
     } else {
@@ -45,9 +45,9 @@ const deleteReport = catchAsync(async (req, res) => {
     const all = permissions.find((i) => i.module === "all");
 
     if (all) {
-        const Report = await Press.deleteOne({ _id: req.params.id });
+        const report = await Report.deleteOne({ _id: req.params.id });
 
-        if (Report.deletedCount > 0) {
+        if (report.deletedCount > 0) {
             return res.status(200).send("Report deleted successfully");
         } else {
             return res.status(404).send("Report not found");
