@@ -71,7 +71,7 @@ const getAllPosts = catchAsync(async (req, res) => {
       .skip(skip)
       .sort({ createdAt: -1 })
       .exec();
-
+    console.log("posts", posts)
     return res.status(200).json({ posts, totalCount });
   } catch (error) {
     // Handle errors

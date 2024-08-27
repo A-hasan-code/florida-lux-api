@@ -13,6 +13,9 @@ const pressSchema = mongoose.Schema(
     cover: {
       type: String,
     },
+    file: {
+      type: String
+    }
   },
   {
     timestamps: true,

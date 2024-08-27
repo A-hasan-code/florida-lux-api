@@ -9,7 +9,14 @@ const reportSchema = mongoose.Schema(
         },
         content: {
             type: String,
+        },
+        cover: {
+            type: String,
+        },
+        file: {
+            type: String
         }
+
     },
     {
         timestamps: true,
